@@ -1,0 +1,52 @@
+{
+  "format": "lingmo-intents",
+  "version": 1,
+  "app": "lingmo-translate",
+  "name": {"en": "Live translation", "pt_BR": "Tradução ao vivo"},
+  "icon": "lingmo-translate",
+  "desktop": "lingmo-translate.desktop",
+  "dbus": {"service": "com.lingmo.Translate", "path": "/Intents"},
+  "intents": [
+    {
+      "id": "translate.live.start",
+      "title": {"en": "Start live translation", "pt_BR": "Iniciar tradução ao vivo"},
+      "description": {"en": "Translates what is playing (the whole system, one app or the microphone) into subtitles on the screen, optionally spoken. Everything runs on this computer. Speaking through the translator microphone is only started from the app window.",
+                      "pt_BR": "Traduz o que está tocando (o sistema todo, um app ou o microfone) em legendas na tela, com voz se quiser. Tudo roda neste computador. Falar pelo microfone tradutor só é iniciado pela janela do app."},
+      "summary": {"en": "Translate {source} into {to}", "pt_BR": "Traduzir {source} para {to}"},
+      "icon": "preferences-desktop-locale",
+      "capabilities": ["create"],
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "mode": {"type": "string", "enum": ["subtitles", "dubbed"], "default": "subtitles",
+                   "title": {"en": "Mode", "pt_BR": "Modo"},
+                   "description": {"en": "subtitles, or dubbed (a translated voice over the original, lowered)", "pt_BR": "legendas, ou dublado (uma voz traduzida sobre o original, mais baixo)"}},
+          "source": {"type": "string", "enum": ["system", "app", "mic"], "default": "system",
+                     "title": {"en": "What to translate", "pt_BR": "O que traduzir"}},
+          "app": {"type": "string", "maxLength": 80, "title": {"en": "App", "pt_BR": "App"},
+                  "description": {"en": "With source app: part of the app name (e.g. Firefox)", "pt_BR": "Com a origem app: parte do nome do app (ex.: Firefox)"}},
+          "from": {"type": "string", "enum": ["auto", "en", "pt", "es", "fr", "it"], "default": "auto", "title": {"en": "From", "pt_BR": "De"}},
+          "to": {"type": "string", "enum": ["pt", "en", "es", "fr", "it"], "default": "pt", "title": {"en": "To", "pt_BR": "Para"}}
+        }
+      },
+      "result": {"type": "object", "properties": {"mode": {"type": "string", "title": {"en": "Mode", "pt_BR": "Modo"}}}},
+      "examples": {
+        "pt_BR": ["traduzir o vídeo para {to}", "legendas ao vivo", "traduzir esta reunião", "traduzir {source} ao vivo"],
+        "en": ["translate this video into {to}", "live subtitles", "translate this meeting", "translate {source} live"]
+      }
+    },
+    {
+      "id": "translate.live.stop",
+      "title": {"en": "Stop live translation", "pt_BR": "Parar tradução ao vivo"},
+      "description": {"en": "Stops the live translation and removes the translator microphone.", "pt_BR": "Para a tradução ao vivo e remove o microfone tradutor."},
+      "summary": {"en": "Stop live translation", "pt_BR": "Parar a tradução ao vivo"},
+      "icon": "media-playback-stop",
+      "capabilities": ["write"],
+      "parameters": {"type": "object", "properties": {}},
+      "examples": {
+        "pt_BR": ["parar a tradução", "desligar as legendas ao vivo"],
+        "en": ["stop translating", "turn off live subtitles"]
+      }
+    }
+  ]
+}

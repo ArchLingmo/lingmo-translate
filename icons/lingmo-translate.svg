@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3D8BFF"/>
+      <stop offset="1" stop-color="#7A5CFF"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="112" height="112" rx="26" fill="url(#bg)"/>
+  <path d="M28 34h44a8 8 0 0 1 8 8v22a8 8 0 0 1-8 8H50l-12 10v-10h-10a8 8 0 0 1-8-8V42a8 8 0 0 1 8-8z" fill="#fff" opacity="0.95"/>
+  <text x="50" y="62" font-family="sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#3D6BFF">A</text>
+  <path d="M60 58h40a8 8 0 0 1 8 8v20a8 8 0 0 1-8 8h-8v10l-12-10H60a8 8 0 0 1-8-8V66a8 8 0 0 1 8-8z" fill="#1E1E2E" opacity="0.88"/>
+  <text x="80" y="85" font-family="sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#fff">文</text>
+  <g fill="#fff">
+    <rect x="94" y="22" width="4" height="10" rx="2"/>
+    <rect x="101" y="17" width="4" height="20" rx="2"/>
+    <rect x="108" y="22" width="4" height="10" rx="2"/>
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+[Desktop Entry]
+Type=Application
+Name=Live Translation
+Name[pt_BR]=Tradução ao vivo
+GenericName=Live speech translation
+GenericName[pt_BR]=Tradução de fala ao vivo
+Comment=Translated subtitles and voice for videos, meetings and calls, on this computer
+Comment[pt_BR]=Legendas e voz traduzidas para vídeos, reuniões e chamadas, neste computador
+Exec=lingmo-translate
+Icon=lingmo-translate
+Terminal=false
+Categories=Utility;Accessibility;AudioVideo;
+Keywords=translate;translation;subtitles;captions;interpreter;dubbing;meeting;tradução;tradutor;legendas;dublagem;reunião;
+Keywords[pt_BR]=tradução;tradutor;legendas;dublagem;reunião;chamada;intérprete;translate;subtitles;
+StartupNotify=true
+X-Lingmo-Intents=translate.live.start;translate.live.stop;
+Actions=Toggle;
+
+[Desktop Action Toggle]
+Name=Start or stop (Meta+Shift+T)
+Name[pt_BR]=Iniciar ou parar (Meta+Shift+T)
+Exec=lingmo-translate --toggle

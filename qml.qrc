@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/Shell.qml</file>
+        <file>qml/Overlay.qml</file>
+        <file>qml/Main.qml</file>
+        <file>qml/TranslatePage.qml</file>
+        <file>qml/VoicesPage.qml</file>
+        <file>qml/ModelsPage.qml</file>
+        <file>qml/RecordDialog.qml</file>
+        <file>icons/lingmo-translate.svg</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Lingmo Translator microphone
+Name[pt_BR]=Microfone do Lingmo Tradutor
+Comment=Makes the "Lingmo Tradutor" microphone available to OBS and call apps
+Comment[pt_BR]=Deixa o microfone "Lingmo Tradutor" disponível para o OBS e apps de chamada
+Exec=lingmo-translate --ensure-mic
+Icon=lingmo-translate
+NoDisplay=true
+X-GNOME-Autostart-Phase=Applications
+X-KDE-autostart-phase=2
